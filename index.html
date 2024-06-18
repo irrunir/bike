@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+<script type="text/javascript">
+
+// Disable right-click
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
+
+ </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ali Dehghan">
+    <link href="index.css" rel="stylesheet"/>
+    <title>Bike | دوچـرخـه</title>
+
+</head>
+
+ <div class="container">
+        <div class="cycle_container">
+            <div class="tier"></div>
+            <div class="tier"></div>
+            <div class="pedle_round"></div>
+            <div class="seat"></div>
+            <div class="front_rod"></div>
+            <div class="front_rod_outer"></div>
+            <div class="side_rod"></div>
+            <div class="side_rod_outer"></div>
+            <div class="peddle"></div>
+        </div>
+    </div>  
